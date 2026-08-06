@@ -12,6 +12,11 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
   old ids.
 
 ### Fixed
+- The Disenchanter, Printer and Blaze Enchanter were invisible in their own Ponder scenes. The scene
+  structures are `.nbt` files that store block ids as plain strings, and those still named the machines
+  under the old `create_enchantment_industry` namespace, so they loaded as air. Their stored block
+  entity data - 1.18.2 era tank and item layouts that the 1.21.1 codecs cannot read - was dropped at
+  the same time; every scene sets the tanks and target items it needs from the storyboard anyway.
 - Ponder scenes showed raw lang keys such as `...ponder.transform.header` instead of their text. Scene
   titles and texts only exist inside the storyboards, and the lang generator never asked Ponder to
   replay them; the generated `en_us.json` now carries all 39 ponder entries. The translations already
