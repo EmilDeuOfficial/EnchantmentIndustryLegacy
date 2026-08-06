@@ -1,0 +1,28 @@
+{
+  "parent": "create_enchantment_industry_legacy:copiable_mystery",
+  "criteria": {
+    "builtin": {
+      "trigger": "create_enchantment_industry_legacy:builtin/relic_restoration"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.create_enchantment_industry_legacy.relic_restoration.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:writable_book"
+    },
+    "title": {
+      "translate": "advancement.create_enchantment_industry_legacy.relic_restoration"
+    }
+  },
+  "requirements": [
+    [
+      "builtin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,19 @@
+{
+  "create_enchantment_industry_legacy.gui.enchanting_guide.no_enchantment": "No Available Enchantment",
+  "create_enchantment_industry_legacy.gui.goggles.printer": "Object to be copied:",
+  "create_enchantment_industry_legacy.gui.goggles.printer.no_target": "None",
+  "create_enchantment_industry_legacy.gui.goggles.blaze_enchanter": "Active Enchantment:",
+  "create_enchantment_industry_legacy.gui.goggles.blaze_enchanter.invalid_target": "Invalid Target",
+  "create_enchantment_industry_legacy.gui.goggles.xp_consumption": "Consumes Experience: %s mB",
+  "create_enchantment_industry_legacy.gui.goggles.hyper_xp_consumption": "Consumes Hyper Experience: %s mB",
+  "create_enchantment_industry_legacy.gui.goggles.ink_consumption": "Consumes Ink: %s mB",
+  "create_enchantment_industry_legacy.gui.goggles.too_expensive": "Too Expensive!",
+
+  "create_enchantment_industry_legacy.generic.unit.page": "Page",
+  "create_enchantment_industry_legacy.generic.unit.pages": "Pages",
+
+  "recipe.create_enchantment_industry_legacy.disenchanting": "Disenchanting",
+
+  "create_enchantment_industry_legacy.display_source.blaze_enchanter_source_target_enchantment": "Target Enchantment",
+  "create_enchantment_industry_legacy.display_source.printer_source_copy_content": "Copy Content"
+}

@@ -1,7 +1,7 @@
 {
   "values": [
-    "create_enchantment_industry:disenchanter",
-    "create_enchantment_industry:printer",
-    "create_enchantment_industry:blaze_enchanter"
+    "create_enchantment_industry_legacy:disenchanter",
+    "create_enchantment_industry_legacy:printer",
+    "create_enchantment_industry_legacy:blaze_enchanter"
   ]
 }

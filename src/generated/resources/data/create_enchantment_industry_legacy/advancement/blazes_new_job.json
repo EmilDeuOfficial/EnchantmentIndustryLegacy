@@ -1,0 +1,28 @@
+{
+  "parent": "create_enchantment_industry_legacy:experienced_engineer",
+  "criteria": {
+    "builtin": {
+      "trigger": "create_enchantment_industry_legacy:builtin/blazes_new_job"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.create_enchantment_industry_legacy.blazes_new_job.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "create_enchantment_industry_legacy:enchanting_guide"
+    },
+    "title": {
+      "translate": "advancement.create_enchantment_industry_legacy.blazes_new_job"
+    }
+  },
+  "requirements": [
+    [
+      "builtin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

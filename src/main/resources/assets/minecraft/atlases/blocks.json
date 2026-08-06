@@ -2,7 +2,7 @@
   "sources": [
     {
       "type": "single",
-      "resource": "create_enchantment_industry:block/blaze_enchanter_book"
+      "resource": "create_enchantment_industry_legacy:block/blaze_enchanter_book"
     },
     {
       "type": "directory",

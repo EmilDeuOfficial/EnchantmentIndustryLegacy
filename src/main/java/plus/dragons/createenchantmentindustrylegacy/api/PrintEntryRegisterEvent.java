@@ -1,0 +1,13 @@
+package plus.dragons.createenchantmentindustrylegacy.api;
+
+import net.neoforged.bus.api.Event;
+import org.jetbrains.annotations.NotNull;
+import plus.dragons.createenchantmentindustrylegacy.content.contraptions.enchanting.printer.PrintEntries;
+import plus.dragons.createenchantmentindustrylegacy.content.contraptions.enchanting.printer.PrintEntry;
+
+public class PrintEntryRegisterEvent extends Event {
+    public void register(@NotNull PrintEntry printEntry) {
+        if (PrintEntries.ENTRIES.put(printEntry.id(), printEntry) != null)
+            throw new IllegalArgumentException(printEntry.id() + "has already been registered!");
+    }
+}

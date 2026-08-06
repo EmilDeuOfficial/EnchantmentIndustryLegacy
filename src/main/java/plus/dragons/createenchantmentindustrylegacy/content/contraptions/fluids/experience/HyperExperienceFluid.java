@@ -1,0 +1,34 @@
+package plus.dragons.createenchantmentindustrylegacy.content.contraptions.fluids.experience;
+
+import net.minecraft.util.Mth;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.fluids.BaseFlowingFluid;
+
+public class HyperExperienceFluid extends ExperienceFluid {
+    public static HyperExperienceFluid createSource(BaseFlowingFluid.Properties properties) {
+        return new HyperExperienceFluid(properties, true);
+    }
+
+    public static HyperExperienceFluid createFlowing(BaseFlowingFluid.Properties properties) {
+        return new HyperExperienceFluid(properties, false);
+    }
+
+    public HyperExperienceFluid(Properties properties, boolean source) {
+        super(10, properties, source);
+    }
+
+    @Override
+    public HyperExperienceOrb convertToOrb(Level level, double x, double y, double z, int fluidAmount) {
+        return new HyperExperienceOrb(level, x, y, z, fluidAmount * xpRatio);
+    }
+
+    @Override
+    public void applyAdditionalEffects(LivingEntity entity, int expAmount) {
+        int duration = 200 * Mth.ceillog2(expAmount);
+        entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, duration));
+        entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, duration));
+    }
+}

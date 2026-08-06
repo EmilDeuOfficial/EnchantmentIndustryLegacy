@@ -4,6 +4,13 @@
 
 The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on NeoForge.
 
+### Identity
+- Mod id is `create_enchantment_industry_legacy` and the root package is
+  `plus.dragons.createenchantmentindustrylegacy`, so this fork can be installed alongside the official
+  `create_enchantment_industry`. All blocks, items, fluids, tags, recipes and advancements live under the
+  new namespace, so existing worlds and packs built against the official mod will not find them under the
+  old ids.
+
 ### Platform
 - Migrated from Forge to NeoForge (21.1.180+) and from Create 6.0.8 to Create 6.0.10+.
 - Build system moved from ForgeGradle to ModDevGradle; `mods.toml` is now a templated
@@ -11,7 +18,7 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
 
 ### API migrations
 - Item NBT replaced by data components. The Enchanting Guide's target is now the
-  `create_enchantment_industry:enchanting_target` component instead of loose `target`/`index` tags.
+  `create_enchantment_industry_legacy:enchanting_target` component instead of loose `target`/`index` tags.
 - Enchantments are data driven: everything works on `Holder<Enchantment>`, curses are detected via the
   `#minecraft:curse` tag, and the removed `Enchantment.Rarity` is mapped back from enchantment weight so
   experience costs stay identical.

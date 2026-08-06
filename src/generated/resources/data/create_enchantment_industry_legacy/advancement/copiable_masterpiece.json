@@ -1,0 +1,28 @@
+{
+  "parent": "create_enchantment_industry_legacy:black_as_ink",
+  "criteria": {
+    "builtin": {
+      "trigger": "create_enchantment_industry_legacy:builtin/copiable_masterpiece"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.create_enchantment_industry_legacy.copiable_masterpiece.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:written_book"
+    },
+    "title": {
+      "translate": "advancement.create_enchantment_industry_legacy.copiable_masterpiece"
+    }
+  },
+  "requirements": [
+    [
+      "builtin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

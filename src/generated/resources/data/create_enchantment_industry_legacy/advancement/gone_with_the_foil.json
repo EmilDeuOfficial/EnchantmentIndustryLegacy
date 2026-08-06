@@ -1,0 +1,28 @@
+{
+  "parent": "create_enchantment_industry_legacy:experimental",
+  "criteria": {
+    "builtin": {
+      "trigger": "create_enchantment_industry_legacy:builtin/gone_with_the_foil"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.create_enchantment_industry_legacy.gone_with_the_foil.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "create_enchantment_industry_legacy:disenchanter"
+    },
+    "title": {
+      "translate": "advancement.create_enchantment_industry_legacy.gone_with_the_foil"
+    }
+  },
+  "requirements": [
+    [
+      "builtin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

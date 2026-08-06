@@ -1,0 +1,28 @@
+{
+  "parent": "create_enchantment_industry_legacy:blazes_new_job",
+  "criteria": {
+    "builtin": {
+      "trigger": "create_enchantment_industry_legacy:builtin/first_order"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.create_enchantment_industry_legacy.first_order.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:golden_helmet"
+    },
+    "title": {
+      "translate": "advancement.create_enchantment_industry_legacy.first_order"
+    }
+  },
+  "requirements": [
+    [
+      "builtin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

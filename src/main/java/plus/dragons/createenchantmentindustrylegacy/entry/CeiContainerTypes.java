@@ -1,0 +1,16 @@
+package plus.dragons.createenchantmentindustrylegacy.entry;
+
+import static plus.dragons.createenchantmentindustrylegacy.EnchantmentIndustry.REGISTRATE;
+
+import com.tterrag.registrate.util.entry.MenuEntry;
+import plus.dragons.createenchantmentindustrylegacy.content.contraptions.enchanting.enchanter.EnchantingGuideMenu;
+import plus.dragons.createenchantmentindustrylegacy.content.contraptions.enchanting.enchanter.EnchantingGuideScreen;
+
+public class CeiContainerTypes {
+    public static final MenuEntry<EnchantingGuideMenu> ENCHANTING_GUIDE_FOR_BLAZE = REGISTRATE.menu(
+            "enchanting_guide_for_blaze",
+            EnchantingGuideMenu::new,
+            () -> EnchantingGuideScreen::new).register();
+
+    public static void register() {}
+}

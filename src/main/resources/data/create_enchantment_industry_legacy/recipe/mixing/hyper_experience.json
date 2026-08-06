@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:glow_ink_sac"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "create_enchantment_industry_legacy:experience"
+    }
+  ],
+  "results": [
+    {
+      "amount": 10,
+      "id": "create_enchantment_industry_legacy:hyper_experience"
+    }
+  ],
+  "heatRequirement": "superheated"
+}

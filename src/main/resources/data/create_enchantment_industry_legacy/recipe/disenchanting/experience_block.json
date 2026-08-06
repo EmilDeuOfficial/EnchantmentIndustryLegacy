@@ -1,0 +1,14 @@
+{
+  "type": "create_enchantment_industry_legacy:disenchanting",
+  "ingredients": [
+    {
+      "item": "create:experience_block"
+    }
+  ],
+  "results": [
+    {
+      "amount": 27,
+      "id": "create_enchantment_industry_legacy:experience"
+    }
+  ]
+}

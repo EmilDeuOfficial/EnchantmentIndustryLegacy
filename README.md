@@ -34,8 +34,10 @@ Ponder scenes, advancements and JEI integration are included.
 Optional integrations: JEI, Quark (Ancient Tome printing), Apotheosis (Potion of Knowledge mixing, tomes are
 barred from the Blaze Enchanter).
 
-> **Note:** this mod uses the same mod id (`create_enchantment_industry`) as upstream, so it is a drop-in
-> replacement and **cannot be installed alongside** the official 1.21.1 version.
+> **Note:** this fork uses its own mod id (`create_enchantment_industry_legacy`) and its own item, block and
+> fluid ids, so it can be installed alongside the official `create_enchantment_industry`. That also means it is
+> *not* a drop-in replacement: worlds and packs built against the official mod will not find these blocks under
+> the old ids.
 
 ## Building
 
@@ -53,7 +55,7 @@ Regenerating the datapack and asset files:
 
 ## Configuration
 
-Gameplay values live in the server config (`create_enchantment_industry-server.toml`), reachable in game
+Gameplay values live in the server config (`create_enchantment_industry_legacy-server.toml`), reachable in game
 through Create's config screen. Tank capacities, experience costs, the Crushing Wheel drop rate and the
 per-enchantment level caps (`enchantmentLevelCaps`) are all adjustable there.
 

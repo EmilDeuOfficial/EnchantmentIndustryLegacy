@@ -1,0 +1,8 @@
+{
+  "values": [
+    "create_enchantment_industry_legacy:flowing_experience",
+    "create_enchantment_industry_legacy:experience",
+    "create_enchantment_industry_legacy:flowing_hyper_experience",
+    "create_enchantment_industry_legacy:hyper_experience"
+  ]
+}
