@@ -11,6 +11,11 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
   new namespace, so existing worlds and packs built against the official mod will not find them under the
   old ids.
 
+### Compatibility
+- Declared incompatible with the official `create_enchantment_industry`; the game refuses to start with an
+  explanatory message if both are installed. The two carry the same machines under different ids and their
+  enhanced-experience systems (Hyper Experience here, Super Experience there) do not interoperate.
+
 ### Platform
 - Migrated from Forge to NeoForge (21.1.180+) and from Create 6.0.8 to Create 6.0.10+.
 - Build system moved from ForgeGradle to ModDevGradle; `mods.toml` is now a templated

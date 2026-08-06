@@ -35,9 +35,12 @@ Optional integrations: JEI, Quark (Ancient Tome printing), Apotheosis (Potion of
 barred from the Blaze Enchanter).
 
 > **Note:** this fork uses its own mod id (`create_enchantment_industry_legacy`) and its own item, block and
-> fluid ids, so it can be installed alongside the official `create_enchantment_industry`. That also means it is
-> *not* a drop-in replacement: worlds and packs built against the official mod will not find these blocks under
-> the old ids.
+> fluid ids, so worlds and packs built against the official mod will not find these blocks under the old ids.
+>
+> It is also declared **incompatible** with the official `create_enchantment_industry` and will refuse to start
+> if both are installed. They carry the same machines under different ids, and their enhanced-experience systems
+> (Hyper Experience here, Super Experience there) do not interoperate — running both would only duplicate
+> everything. Pick one.
 
 ## Building
 

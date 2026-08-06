@@ -35,3 +35,13 @@ type = "required"
 versionRange = "${create_version_range}"
 ordering = "AFTER"
 side = "BOTH"
+
+# This fork carries the same content under its own ids. Running it next to the official mod would
+# duplicate every machine and give two parallel, non-interoperable enhanced-experience systems
+# (Hyper Experience here, Super Experience there), so the combination is rejected outright.
+[[dependencies.${mod_id}]]
+modId = "create_enchantment_industry"
+type = "incompatible"
+reason = "Create: Enchantment Industry Legacy replaces Create: Enchantment Industry - it is the same mod with the older 1.20.1 feature set. Installing both duplicates every machine. Please remove one of them."
+ordering = "NONE"
+side = "BOTH"
