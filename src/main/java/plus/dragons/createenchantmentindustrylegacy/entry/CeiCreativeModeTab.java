@@ -19,9 +19,12 @@ public class CeiCreativeModeTab {
      * while this tab is the registrate's default one - listing the items here as well would add each
      * of them twice and make the creative menu throw.
      */
+    /** Also what the creative search tab prints in blue under an item's name, so it spells the mod out. */
+    public static final String TITLE_KEY = "itemGroup." + EnchantmentIndustry.ID + ".base";
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB =
             REGISTER.register("base", () -> CreativeModeTab.builder()
-                    .title(Component.literal("CEI"))
+                    .title(Component.translatable(TITLE_KEY))
                     .withTabsBefore(AllCreativeModeTabs.BASE_CREATIVE_TAB.getKey(),
                             AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getKey())
                     .icon(CeiItems.ENCHANTING_GUIDE::asStack)

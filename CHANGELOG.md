@@ -11,6 +11,12 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
   new namespace, so existing worlds and packs built against the official mod will not find them under the
   old ids.
 
+### Changed
+- The creative tab is called "Create: Enchantment Industry Legacy" instead of "CEI". The creative
+  search tab prints the tab's name in blue under an item's name, so the abbreviation showed up there
+  too while JEI listed the mod in full - now both agree. The title is a translation key
+  (`itemGroup.create_enchantment_industry_legacy.base`) rather than a hardcoded string.
+
 ### Fixed
 - The Printer, Enchanting Guide and Experience Rotor recipes asked for `neoforge:plates/iron`,
   `neoforge:plates/obsidian` and `neoforge:ingots/zinc`, which do not exist - common tags moved to the

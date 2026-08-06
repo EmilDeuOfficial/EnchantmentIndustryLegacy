@@ -1,4 +1,5 @@
 {
+  "itemGroup.create_enchantment_industry_legacy.base": "Create: Enchantment Industry Legacy",
   "create_enchantment_industry_legacy.gui.enchanting_guide.no_enchantment": "No Available Enchantment",
   "create_enchantment_industry_legacy.gui.goggles.printer": "Object to be copied:",
   "create_enchantment_industry_legacy.gui.goggles.printer.no_target": "None",

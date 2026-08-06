@@ -101,5 +101,6 @@
   "item.create_enchantment_industry_legacy.experience_rotor.tooltip": "EXPERIENCE ROTOR",
   "item.create_enchantment_industry_legacy.experience_rotor.tooltip.summary": "Used in _Mixing_ _Recipes_ to convert _Experience_ _Fluids_.",
   "item.create_enchantment_industry_legacy.hyper_experience_bottle": "Bottle O' Hyper Enchanting",
-  "item.create_enchantment_industry_legacy.ink_bucket": "Ink Bucket"
+  "item.create_enchantment_industry_legacy.ink_bucket": "Ink Bucket",
+  "itemGroup.create_enchantment_industry_legacy.base": "Create: Enchantment Industry Legacy"
 }
