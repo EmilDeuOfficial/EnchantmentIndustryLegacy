@@ -13,6 +13,7 @@ import com.simibubi.create.foundation.ponder.element.BeltItemElement;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
+import javax.annotation.Nullable;
 import net.createmod.catnip.math.Pointing;
 import net.createmod.ponder.api.PonderPalette;
 import net.createmod.ponder.api.element.ElementLink;
@@ -328,7 +329,9 @@ public class EnchantmentScenes {
         ItemStack sword = new ItemStack(Items.NETHERITE_SWORD);
         scene.idle(10);
         scene.world().modifyBlockEntityNBT(deployerSelection, DeployerBlockEntity.class, nbt -> {
-            nbt.put("HeldItem", sword.save(registries()));
+            RegistryAccess registries = registries();
+            if (registries != null)
+                nbt.put("HeldItem", sword.save(registries));
             nbt.putString("mode", "PUNCH");
         });
         scene.idle(30);
@@ -671,33 +674,50 @@ public class EnchantmentScenes {
             action.accept(tank);
     }
 
-    /** Ponder runs client side, so the enchantment registry is read off the connected level. */
+    /**
+     * Enchantments live in a datapack registry, so Ponder reads them off the connected level. Data
+     * generation replays the storyboards with no level attached, purely to collect their titles and
+     * texts - the item contents are irrelevant there, so everything registry bound is skipped.
+     */
+    @Nullable
     private static RegistryAccess registries() {
-        return Minecraft.getInstance().level.registryAccess();
+        Minecraft minecraft = Minecraft.getInstance();
+        return minecraft == null || minecraft.level == null ? null : minecraft.level.registryAccess();
     }
 
+    @Nullable
     private static Holder<Enchantment> holder(ResourceKey<Enchantment> key) {
-        return registries().registryOrThrow(Registries.ENCHANTMENT).getHolderOrThrow(key);
+        RegistryAccess registries = registries();
+        return registries == null ? null : registries.registryOrThrow(Registries.ENCHANTMENT).getHolderOrThrow(key);
     }
 
     private static void enchantItem(ItemStack itemStack, ResourceKey<Enchantment> enchantment, int level) {
-        EnchantmentHelper.updateEnchantments(itemStack, mutable -> mutable.set(holder(enchantment), level));
+        Holder<Enchantment> holder = holder(enchantment);
+        if (holder == null)
+            return;
+        EnchantmentHelper.updateEnchantments(itemStack, mutable -> mutable.set(holder, level));
     }
 
     private static void enchantRandomly(ItemStack itemStack) {
         if (itemStack.is(Items.ENCHANTED_BOOK)) {
             enchantItem(itemStack, Enchantments.MENDING, 1);
-        } else {
-            EnchantmentHelper.enchantItem(RandomSource.create(), itemStack, 30, registries(), Optional.empty());
+            return;
         }
+        RegistryAccess registries = registries();
+        if (registries == null)
+            return;
+        EnchantmentHelper.enchantItem(RandomSource.create(), itemStack, 30, registries, Optional.empty());
     }
 
     private static ItemStack enchantingGuide(ResourceKey<Enchantment> enchantment, int level) {
         var ret = CeiItems.ENCHANTING_GUIDE.asStack();
         var book = Items.ENCHANTED_BOOK.getDefaultInstance();
-        ItemEnchantments.Mutable enchantments = new ItemEnchantments.Mutable(ItemEnchantments.EMPTY);
-        enchantments.set(holder(enchantment), level);
-        EnchantmentHelper.setEnchantments(book, enchantments.toImmutable());
+        Holder<Enchantment> holder = holder(enchantment);
+        if (holder != null) {
+            ItemEnchantments.Mutable enchantments = new ItemEnchantments.Mutable(ItemEnchantments.EMPTY);
+            enchantments.set(holder, level);
+            EnchantmentHelper.setEnchantments(book, enchantments.toImmutable());
+        }
         ret.set(CeiDataComponents.ENCHANTING_TARGET.get(), new EnchantingTarget(book, 0));
         return ret;
     }

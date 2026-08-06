@@ -12,6 +12,10 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
   old ids.
 
 ### Fixed
+- Ponder scenes showed raw lang keys such as `...ponder.transform.header` instead of their text. Scene
+  titles and texts only exist inside the storyboards, and the lang generator never asked Ponder to
+  replay them; the generated `en_us.json` now carries all 39 ponder entries. The translations already
+  had them, so only English was affected.
 - Handing the Printer a new copy target in creative mode duplicated items. Creative never consumes the
   item from the player's hand, but the previous target was still handed back, so every click added one
   more copy to the inventory. The old target is only returned now when the new one was actually taken.

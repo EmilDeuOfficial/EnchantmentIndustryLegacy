@@ -7,8 +7,10 @@ import com.tterrag.registrate.providers.RegistrateLangProvider;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import net.createmod.ponder.foundation.PonderIndex;
 import plus.dragons.createenchantmentindustrylegacy.EnchantmentIndustry;
 import plus.dragons.createenchantmentindustrylegacy.dragonLibLegacy.advancement.AdvancementEntry;
+import plus.dragons.createenchantmentindustrylegacy.foundation.ponder.CeiPonderPlugin;
 
 /**
  * Feeds the hand written {@code lang/default/*.json} partials and the advancement titles into
@@ -25,6 +27,18 @@ public class CeiLangGen {
         for (String partial : PARTIALS)
             addAll(provider, readPartial(partial));
         addAll(provider, AdvancementEntry.provideLangEntries(EnchantmentIndustry.ID));
+        providePonderLang(provider);
+    }
+
+    /**
+     * Scene titles and texts only exist inside the storyboards, so Ponder has to build every scene to
+     * collect them. {@code provideLang} does that itself, it just needs the plugin to be registered -
+     * which during data generation has not necessarily happened yet.
+     */
+    private static void providePonderLang(RegistrateLangProvider provider) {
+        if (PonderIndex.streamPlugins().noneMatch(plugin -> plugin instanceof CeiPonderPlugin))
+            PonderIndex.addPlugin(new CeiPonderPlugin());
+        PonderIndex.getLangAccess().provideLang(EnchantmentIndustry.ID, provider::add);
     }
 
     private static void addAll(RegistrateLangProvider provider, JsonObject object) {
