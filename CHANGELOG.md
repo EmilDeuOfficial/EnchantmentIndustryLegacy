@@ -12,6 +12,16 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
   old ids.
 
 ### Fixed
+- The Printer, Enchanting Guide and Experience Rotor recipes asked for `neoforge:plates/iron`,
+  `neoforge:plates/obsidian` and `neoforge:ingots/zinc`, which do not exist - common tags moved to the
+  `c` namespace on 1.21, not to `neoforge`. All three showed up as "Empty Tag" and the items were
+  uncraftable. They now resolve to Iron Sheet, Sturdy Sheet and Zinc Ingot.
+- The JEI category showed the raw key `...recipe.disenchanting`. Create 6 builds the title as
+  `<namespace>.recipe.<path>` where 1.20.1 used `recipe.<namespace>.<path>`.
+- The Display Link source names were registered under ids the mod no longer uses
+  (`printer_source_copy_content`, `blaze_enchanter_source_target_enchantment`) and showed as raw keys
+  too; they are now `copy_content` and `target_enchantment`. All twelve translations were moved along
+  with the English entries.
 - The Disenchanter, Printer and Blaze Enchanter were invisible in their own Ponder scenes. The scene
   structures are `.nbt` files that store block ids as plain strings, and those still named the machines
   under the old `create_enchantment_industry` namespace, so they loaded as air. Their stored block

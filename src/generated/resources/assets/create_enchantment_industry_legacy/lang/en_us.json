@@ -35,8 +35,8 @@
   "block.create_enchantment_industry_legacy.disenchanter": "Disenchanter",
   "block.create_enchantment_industry_legacy.ink": "Ink",
   "block.create_enchantment_industry_legacy.printer": "Printer",
-  "create_enchantment_industry_legacy.display_source.blaze_enchanter_source_target_enchantment": "Target Enchantment",
-  "create_enchantment_industry_legacy.display_source.printer_source_copy_content": "Copy Content",
+  "create_enchantment_industry_legacy.display_source.copy_content": "Copy Content",
+  "create_enchantment_industry_legacy.display_source.target_enchantment": "Target Enchantment",
   "create_enchantment_industry_legacy.generic.unit.page": "Page",
   "create_enchantment_industry_legacy.generic.unit.pages": "Pages",
   "create_enchantment_industry_legacy.gui.enchanting_guide.no_enchantment": "No Available Enchantment",
@@ -87,6 +87,7 @@
   "create_enchantment_industry_legacy.ponder.transform.text_2": "To make Blaze Enchanter work, Enchanting Guide must be configured first. Right-clicking Blaze Enchanter or right-clicking Enchanting Guide in hands can open configuration panel.",
   "create_enchantment_industry_legacy.ponder.transform.text_3": "To retrieve the enchanting guide, right-click the Blaze Enchanter with wrench when sneaking.",
   "create_enchantment_industry_legacy.ponder.transform.text_4": "You can replace the Enchanting Guide by holding it directly in your hand and right-clicking on the Blaze Enchanter.",
+  "create_enchantment_industry_legacy.recipe.disenchanting": "Disenchanting",
   "entity.create_enchantment_industry_legacy.hyper_experience_bottle": "Thrown Bottle O' Hyper Enchanting",
   "entity.create_enchantment_industry_legacy.hyper_experience_orb": "Hyper Experience Orb",
   "fluid.create_enchantment_industry_legacy.experience": "Liquid Experience",
@@ -100,6 +101,5 @@
   "item.create_enchantment_industry_legacy.experience_rotor.tooltip": "EXPERIENCE ROTOR",
   "item.create_enchantment_industry_legacy.experience_rotor.tooltip.summary": "Used in _Mixing_ _Recipes_ to convert _Experience_ _Fluids_.",
   "item.create_enchantment_industry_legacy.hyper_experience_bottle": "Bottle O' Hyper Enchanting",
-  "item.create_enchantment_industry_legacy.ink_bucket": "Ink Bucket",
-  "recipe.create_enchantment_industry_legacy.disenchanting": "Disenchanting"
+  "item.create_enchantment_industry_legacy.ink_bucket": "Ink Bucket"
 }

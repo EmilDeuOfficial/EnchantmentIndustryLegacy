@@ -35,8 +35,8 @@
   "block.create_enchantment_industry_legacy.disenchanter": "ɹǝʇuɐɥɔuǝsıᗡ",
   "block.create_enchantment_industry_legacy.ink": "ʞuI",
   "block.create_enchantment_industry_legacy.printer": "ɹǝʇuıɹԀ",
-  "create_enchantment_industry_legacy.display_source.blaze_enchanter_source_target_enchantment": "ʇuǝɯʇuɐɥɔuƎ ʇǝbɹɐ⟘",
-  "create_enchantment_industry_legacy.display_source.printer_source_copy_content": "ʇuǝʇuoƆ ʎdoƆ",
+  "create_enchantment_industry_legacy.display_source.copy_content": "ʇuǝʇuoƆ ʎdoƆ",
+  "create_enchantment_industry_legacy.display_source.target_enchantment": "ʇuǝɯʇuɐɥɔuƎ ʇǝbɹɐ⟘",
   "create_enchantment_industry_legacy.generic.unit.page": "ǝbɐԀ",
   "create_enchantment_industry_legacy.generic.unit.pages": "sǝbɐԀ",
   "create_enchantment_industry_legacy.gui.enchanting_guide.no_enchantment": "ʇuǝɯʇuɐɥɔuƎ ǝןqɐןıɐʌⱯ oN",
@@ -87,6 +87,7 @@
   "create_enchantment_industry_legacy.ponder.transform.text_2": "˙ןǝuɐd uoıʇɐɹnbıɟuoɔ uǝdo uɐɔ spuɐɥ uı ǝpın⅁ buıʇuɐɥɔuƎ buıʞɔıןɔ-ʇɥbıɹ ɹo ɹǝʇuɐɥɔuƎ ǝzɐןᗺ buıʞɔıןɔ-ʇɥbıᴚ ˙ʇsɹıɟ pǝɹnbıɟuoɔ ǝq ʇsnɯ ǝpın⅁ buıʇuɐɥɔuƎ 'ʞɹoʍ ɹǝʇuɐɥɔuƎ ǝzɐןᗺ ǝʞɐɯ o⟘",
   "create_enchantment_industry_legacy.ponder.transform.text_3": "˙buıʞɐǝus uǝɥʍ ɥɔuǝɹʍ ɥʇıʍ ɹǝʇuɐɥɔuƎ ǝzɐןᗺ ǝɥʇ ʞɔıןɔ-ʇɥbıɹ 'ǝpınb buıʇuɐɥɔuǝ ǝɥʇ ǝʌǝıɹʇǝɹ o⟘",
   "create_enchantment_industry_legacy.ponder.transform.text_4": "˙ɹǝʇuɐɥɔuƎ ǝzɐןᗺ ǝɥʇ uo buıʞɔıןɔ-ʇɥbıɹ puɐ puɐɥ ɹnoʎ uı ʎןʇɔǝɹıp ʇı buıpןoɥ ʎq ǝpın⅁ buıʇuɐɥɔuƎ ǝɥʇ ǝɔɐןdǝɹ uɐɔ noʎ",
+  "create_enchantment_industry_legacy.recipe.disenchanting": "buıʇuɐɥɔuǝsıᗡ",
   "entity.create_enchantment_industry_legacy.hyper_experience_bottle": "buıʇuɐɥɔuƎ ɹǝdʎH ,O ǝןʇʇoᗺ uʍoɹɥ⟘",
   "entity.create_enchantment_industry_legacy.hyper_experience_orb": "qɹO ǝɔuǝıɹǝdxƎ ɹǝdʎH",
   "fluid.create_enchantment_industry_legacy.experience": "ǝɔuǝıɹǝdxƎ pınbıꞀ",
@@ -100,6 +101,5 @@
   "item.create_enchantment_industry_legacy.experience_rotor.tooltip": "ᴚO⟘Oᴚ ƎƆNƎIᴚƎԀXƎ",
   "item.create_enchantment_industry_legacy.experience_rotor.tooltip.summary": "˙‾spınןℲ‾ ‾ǝɔuǝıɹǝdxƎ‾ ʇɹǝʌuoɔ oʇ ‾sǝdıɔǝᴚ‾ ‾buıxıW‾ uı pǝs∩",
   "item.create_enchantment_industry_legacy.hyper_experience_bottle": "buıʇuɐɥɔuƎ ɹǝdʎH ,O ǝןʇʇoᗺ",
-  "item.create_enchantment_industry_legacy.ink_bucket": "ʇǝʞɔnᗺ ʞuI",
-  "recipe.create_enchantment_industry_legacy.disenchanting": "buıʇuɐɥɔuǝsıᗡ"
+  "item.create_enchantment_industry_legacy.ink_bucket": "ʇǝʞɔnᗺ ʞuI"
 }

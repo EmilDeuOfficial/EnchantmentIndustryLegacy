@@ -8,12 +8,9 @@
   "create_enchantment_industry_legacy.gui.goggles.hyper_xp_consumption": "Consumes Hyper Experience: %s mB",
   "create_enchantment_industry_legacy.gui.goggles.ink_consumption": "Consumes Ink: %s mB",
   "create_enchantment_industry_legacy.gui.goggles.too_expensive": "Too Expensive!",
-
   "create_enchantment_industry_legacy.generic.unit.page": "Page",
   "create_enchantment_industry_legacy.generic.unit.pages": "Pages",
-
-  "recipe.create_enchantment_industry_legacy.disenchanting": "Disenchanting",
-
-  "create_enchantment_industry_legacy.display_source.blaze_enchanter_source_target_enchantment": "Target Enchantment",
-  "create_enchantment_industry_legacy.display_source.printer_source_copy_content": "Copy Content"
+  "create_enchantment_industry_legacy.recipe.disenchanting": "Disenchanting",
+  "create_enchantment_industry_legacy.display_source.target_enchantment": "Target Enchantment",
+  "create_enchantment_industry_legacy.display_source.copy_content": "Copy Content"
 }
