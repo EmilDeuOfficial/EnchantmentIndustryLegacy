@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
@@ -66,6 +68,7 @@ public class PrinterBlock extends Block implements IWrenchable, IBE<PrinterBlock
             if (!be.getCopyTarget().isEmpty()) {
                 player.setItemInHand(InteractionHand.MAIN_HAND, be.getCopyTarget());
                 be.setCopyTarget(ItemStack.EMPTY);
+                playTargetSound(world, pos, player, false);
                 return InteractionResult.SUCCESS;
             }
             return InteractionResult.PASS;
@@ -83,21 +86,36 @@ public class PrinterBlock extends Block implements IWrenchable, IBE<PrinterBlock
         copy.setCount(1);
         if (Printing.match(copy) != null) {
             return onBlockEntityUseItemOn(world, pos, be -> {
-                if (!player.getAbilities().instabuild)
+                boolean consumed = !player.getAbilities().instabuild;
+                if (consumed)
                     heldItem.shrink(1);
-                if (!be.getCopyTarget().isEmpty()) {
-                    if (!player.getAbilities().instabuild && heldItem.isEmpty()) {
-                        player.setItemInHand(hand, be.getCopyTarget());
-                    } else {
-                        if (!player.addItem(be.getCopyTarget().copy()))
-                            player.drop(be.getCopyTarget(), false, true);
-                    }
-                }
+                // setCopyTarget replaces the field, so the old stack can be handed over as is.
+                ItemStack previousTarget = be.getCopyTarget();
                 be.setCopyTarget(copy);
+                // Only give the previous target back when the new one was actually taken from the
+                // player. In creative nothing is consumed, so returning it would mint a free item
+                // on every click.
+                if (consumed && !previousTarget.isEmpty()) {
+                    if (heldItem.isEmpty())
+                        player.setItemInHand(hand, previousTarget);
+                    else if (!player.addItem(previousTarget))
+                        player.drop(previousTarget, false, true);
+                }
+                playTargetSound(world, pos, player, true);
                 return ItemInteractionResult.SUCCESS;
             });
         }
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    /**
+     * The printer has no visual for its copy target, so without this the interaction is silent and
+     * indistinguishable from a click that did nothing. Passing the player makes the server skip them
+     * and the client play it locally, so it is heard exactly once on both sides.
+     */
+    private static void playTargetSound(Level world, BlockPos pos, Player player, boolean inserted) {
+        world.playSound(player, pos, inserted ? SoundEvents.ITEM_FRAME_ADD_ITEM : SoundEvents.ITEM_FRAME_REMOVE_ITEM,
+                SoundSource.BLOCKS, 0.7f, inserted ? 1.1f : 0.9f);
     }
 
     @Override

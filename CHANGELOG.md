@@ -12,6 +12,12 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
   old ids.
 
 ### Fixed
+- Handing the Printer a new copy target in creative mode duplicated items. Creative never consumes the
+  item from the player's hand, but the previous target was still handed back, so every click added one
+  more copy to the inventory. The old target is only returned now when the new one was actually taken.
+- Inserting or taking the Printer's copy target plays a sound. The Printer has no visual for its target,
+  so the interaction was silent and looked like nothing had happened - the target is still shown by
+  Engineer's Goggles and by a Display Link.
 - Throwing a Bottle O' Hyper Enchanting crashed the client with a null entity renderer, and the
   Disenchanter, Printer and Blaze Enchanter had no block entity renderer either. Registrate registers
   those client side through `OneTimeEventReceiver`, which drops the listener when the registrate does
