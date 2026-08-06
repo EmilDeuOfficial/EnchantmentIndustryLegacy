@@ -1,0 +1,32 @@
+# gradle
+.gradle/
+build/
+out/
+classes/
+repo/
+
+# idea
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# eclipse / vscode
+.settings/
+.metadata/
+.classpath
+.project
+bin/
+.vscode/
+
+# macos
+*.DS_Store
+
+# neoforge / moddev
+run/
+runs/
+run-data/
+logs/
+
+# datagen cache
+src/generated/resources/.cache/
