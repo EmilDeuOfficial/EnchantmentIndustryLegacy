@@ -12,6 +12,10 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
   old ids.
 
 ### Fixed
+- Throwing a Bottle O' Hyper Enchanting crashed the client with a null entity renderer, and the
+  Disenchanter, Printer and Blaze Enchanter had no block entity renderer either. Registrate registers
+  those client side through `OneTimeEventReceiver`, which drops the listener when the registrate does
+  not know the mod event bus yet, so `registerEventListeners` now runs before anything is built.
 - Opening the inventory crashed with "already exists in the tab's list". Registrate 1.21 defaults every
   entry to `CreativeModeTabs.SEARCH`, so listing the items in the tab's own `displayItems` added each of
   them a second time. The registrate's default tab is now pointed at this mod's tab and the manual list

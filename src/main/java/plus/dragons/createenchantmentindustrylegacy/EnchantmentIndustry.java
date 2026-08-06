@@ -57,6 +57,10 @@ public class EnchantmentIndustry {
     }
 
     private void registerEntries(IEventBus modEventBus) {
+        // Must come first. Registrate routes client-side registrations (entity and block entity
+        // renderers) through OneTimeEventReceiver, which parks them in a static queue while the
+        // registrate does not know the mod event bus yet - and nothing ever drains that queue.
+        REGISTRATE.registerEventListeners(modEventBus);
         CeiDataComponents.register(modEventBus);
         // Has to run before any block or item is built so they land in our tab instead of the search tab
         CeiCreativeModeTab.register(modEventBus);
@@ -73,7 +77,6 @@ public class EnchantmentIndustry {
         CeiPackets.register(modEventBus);
         CeiAdvancements.registerTriggers(modEventBus);
         CeiLangGen.register();
-        REGISTRATE.registerEventListeners(modEventBus);
     }
 
     private void registerGameEvents(IEventBus gameEventBus) {
