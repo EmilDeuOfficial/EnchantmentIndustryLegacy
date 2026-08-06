@@ -58,6 +58,8 @@ public class EnchantmentIndustry {
 
     private void registerEntries(IEventBus modEventBus) {
         CeiDataComponents.register(modEventBus);
+        // Has to run before any block or item is built so they land in our tab instead of the search tab
+        CeiCreativeModeTab.register(modEventBus);
         CeiBlocks.register();
         CeiBlockEntities.register();
         CeiBlockEntities.registerCapabilityListener(modEventBus);
@@ -67,7 +69,6 @@ public class EnchantmentIndustry {
         CeiItems.register();
         CeiRecipeTypes.register(modEventBus);
         CeiTags.register();
-        CeiCreativeModeTab.register(modEventBus);
         CeiDisplaySources.register();
         CeiPackets.register(modEventBus);
         CeiAdvancements.registerTriggers(modEventBus);

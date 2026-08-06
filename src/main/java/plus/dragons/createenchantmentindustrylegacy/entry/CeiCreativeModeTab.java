@@ -5,34 +5,31 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import plus.dragons.createenchantmentindustrylegacy.EnchantmentIndustry;
 
 public class CeiCreativeModeTab {
-    private static final DeferredRegister<CreativeModeTab> REGISTER;
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB;
+    private static final DeferredRegister<CreativeModeTab> REGISTER =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EnchantmentIndustry.ID);
 
-    public CeiCreativeModeTab() {}
+    /**
+     * The tab is left empty here on purpose. Registrate fills it through
+     * {@link net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent} for every entry built
+     * while this tab is the registrate's default one - listing the items here as well would add each
+     * of them twice and make the creative menu throw.
+     */
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB =
+            REGISTER.register("base", () -> CreativeModeTab.builder()
+                    .title(Component.literal("CEI"))
+                    .withTabsBefore(AllCreativeModeTabs.BASE_CREATIVE_TAB.getKey(),
+                            AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getKey())
+                    .icon(CeiItems.ENCHANTING_GUIDE::asStack)
+                    .build());
 
     public static void register(IEventBus modEventBus) {
         REGISTER.register(modEventBus);
-    }
-
-    static {
-        REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EnchantmentIndustry.ID);
-        CREATIVE_TAB = REGISTER.register("base", () -> {
-            return CreativeModeTab.builder().title(Component.literal("CEI"))
-                    .withTabsBefore(AllCreativeModeTabs.BASE_CREATIVE_TAB.getKey(), AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getKey())
-                    .icon(CeiItems.ENCHANTING_GUIDE::asStack)
-                    .displayItems((params, output) -> {
-                        output.accept(CeiBlocks.DISENCHANTER);
-                        output.accept(CeiBlocks.PRINTER);
-                        output.accept(CeiItems.ENCHANTING_GUIDE);
-                        output.accept(CeiItems.EXPERIENCE_ROTOR);
-                        output.accept(CeiFluids.INK.get().getBucket());
-                        output.accept(CeiItems.HYPER_EXP_BOTTLE);
-                    }).build();
-        });
+        // Registrate defaults to CreativeModeTabs.SEARCH; point it at our own tab before any entry is built.
+        EnchantmentIndustry.REGISTRATE.defaultCreativeTab(CREATIVE_TAB.getKey());
     }
 }

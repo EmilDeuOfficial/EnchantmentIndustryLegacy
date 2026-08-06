@@ -11,6 +11,12 @@ The 1.20.1 feature set of Create: Enchantment Industry, brought to 1.21.1 on Neo
   new namespace, so existing worlds and packs built against the official mod will not find them under the
   old ids.
 
+### Fixed
+- Opening the inventory crashed with "already exists in the tab's list". Registrate 1.21 defaults every
+  entry to `CreativeModeTabs.SEARCH`, so listing the items in the tab's own `displayItems` added each of
+  them a second time. The registrate's default tab is now pointed at this mod's tab and the manual list
+  is gone.
+
 ### Compatibility
 - Declared incompatible with the official `create_enchantment_industry`; the game refuses to start with an
   explanatory message if both are installed. The two carry the same machines under different ids and their
