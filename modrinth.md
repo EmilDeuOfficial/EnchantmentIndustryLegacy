@@ -1,8 +1,6 @@
 <!-- MODRINTH SUMMARY (paste into Project Settings → Summary, max 256 chars) -->
 <!-- Automatic enchanting for Create: disenchant gear into Liquid Experience, enchant items on a belt with the Blaze Enchanter, and mass-copy enchanted books with the Printer. The 1.20.1 feature set, ported to 1.21.1 NeoForge. -->
 
-![Create: Enchantment Industry Legacy](img/logo.png)
-
 ## 📖 Create: Enchantment Industry Legacy
 
 Automatic enchanting for Create — the **1.20.1 feature set**, ported to Minecraft 1.21.1 and NeoForge. Strip

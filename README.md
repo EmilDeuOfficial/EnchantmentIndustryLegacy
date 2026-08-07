@@ -1,5 +1,3 @@
-![Create: Enchantment Industry Legacy](img/logo.png)
-
 ## 📖 Create: Enchantment Industry Legacy
 
 Automatic enchanting for Create — the **1.20.1 feature set**, ported to Minecraft 1.21.1 and NeoForge. Strip
