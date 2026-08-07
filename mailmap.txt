@@ -1,0 +1,6 @@
+Emil_Deu <emiloehrkediscord@gmail.com> Claude <claude@anthropic.com>
+Emil_Deu <emiloehrkediscord@gmail.com> <claude@anthropic.com>
+Emil_Deu <emiloehrkediscord@gmail.com> Claude <noreply@anthropic.com>
+Emil_Deu <emiloehrkediscord@gmail.com> <noreply@anthropic.com>
+Emil_Deu <emiloehrkediscord@gmail.com> Claude Code <claude@anthropic.com>
+Emil_Deu <emiloehrkediscord@gmail.com> Claude Code <noreply@anthropic.com>
