@@ -1,5 +1,18 @@
 # Create: Enchantment Industry Legacy
 
+> **This is an unofficial fork. I am not the original author.**
+>
+> **Create: Enchantment Industry** was created by **MarbleGateKeeper** and **LimonBlaze** of
+> [DragonsPlus](https://github.com/DragonsPlusMinecraft). Every machine, model, texture and mechanic in this
+> mod is their work. This fork only takes their 1.20.1 version, released under the MIT license, and ports it
+> to Minecraft 1.21.1 and NeoForge. Nothing was invented here.
+>
+> - Original project: [Create: Enchantment Industry on Modrinth](https://modrinth.com/mod/create-enchantment-industry)
+> - Original source: [DragonsPlusMinecraft/CreateEnchantmentIndustry](https://github.com/DragonsPlusMinecraft/CreateEnchantmentIndustry)
+>
+> This fork is not affiliated with or endorsed by DragonsPlus. If you want the actively maintained mod, get
+> the original.
+
 Automatic enchanting for Create: the 1.20.1 feature set, ported to Minecraft 1.21.1 and NeoForge. Strip enchantments into Liquid Experience, pour them back onto gear with a Blaze Enchanter, and mass-produce enchanted books with a Printer.
 
 Upstream rewrote the mod for 1.21.1 around a different set of machines. This fork keeps the machines people actually built their factories around. There are no new resources and no parallel progression: everything runs on Create's existing kinetics, fluids and belts.
@@ -88,8 +101,28 @@ XP storage is a virtual fluid (`VirtualFluid`) at a ratio of 1 mB per XP point, 
 
 This fork uses its own mod id (`create_enchantment_industry_legacy`) and its own block, item and fluid ids, so worlds built against the official mod will not find these machines under the old ids. It is also declared `incompatible` with `create_enchantment_industry` in its mod metadata. Both carry the same machines under different ids, and their enhanced-experience systems (Hyper Experience here, Super Experience there) do not interoperate, so running both would only duplicate everything. Pick one.
 
+## Credits and license
+
+**The original mod and all of its content were made by MarbleGateKeeper and LimonBlaze
+([DragonsPlus](https://github.com/DragonsPlusMinecraft)), Copyright (c) 2022.**
+
+| | |
+|---|---|
+| Original project | [modrinth.com/mod/create-enchantment-industry](https://modrinth.com/mod/create-enchantment-industry) |
+| Original source | [DragonsPlusMinecraft/CreateEnchantmentIndustry](https://github.com/DragonsPlusMinecraft/CreateEnchantmentIndustry) |
+| License | MIT, see [LICENSE](LICENSE). The original copyright notice is kept intact and ships inside the JAR |
+
+DragonsPlus released the **1.20.1** version, which this fork is derived from, under the **MIT license**, which
+permits redistribution and modification as long as the copyright notice travels with it. Their newer **1.21.1
+rewrite is licensed LGPL-3.0-or-later** and none of that code is used here, so do not go by the license shown
+on their current Modrinth page when judging this fork.
+
+What this fork changed: Forge to NeoForge (21.1.x), Minecraft 1.20.1 to 1.21.1, item NBT to data components,
+hardcoded to data-driven enchantments, ForgeGradle to ModDevGradle, plus bug fixes found during the port. No
+content, textures or mechanics were added.
+
+If the original authors want this fork taken down, that request is respected. Open an issue on the repository.
+
 ## Source
 
 [github.com/EmilDeuOfficial/EnchantmentIndustryLegacy](https://github.com/EmilDeuOfficial/EnchantmentIndustryLegacy)
-
-Original mod by MarbleGateKeeper and LimonBlaze (DragonsPlus), MIT licensed. See [LICENSE](LICENSE).
