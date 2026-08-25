@@ -3,19 +3,6 @@
 
 ## Create: Enchantment Industry Legacy
 
-> **This is an unofficial fork. I am not the original author.**
->
-> **Create: Enchantment Industry** was created by **MarbleGateKeeper** and **LimonBlaze** of
-> [DragonsPlus](https://github.com/DragonsPlusMinecraft). Every machine, model, texture and mechanic in this
-> mod is their work. This fork only takes their 1.20.1 version, released under the MIT license, and ports it
-> to Minecraft 1.21.1 and NeoForge. Nothing was invented here.
->
-> - Original project: [Create: Enchantment Industry on Modrinth](https://modrinth.com/mod/create-enchantment-industry)
-> - Original source: [DragonsPlusMinecraft/CreateEnchantmentIndustry](https://github.com/DragonsPlusMinecraft/CreateEnchantmentIndustry)
->
-> This fork is not affiliated with or endorsed by DragonsPlus. If you want the actively maintained mod, get
-> the original.
-
 Automatic enchanting for Create: the 1.20.1 feature set, ported to Minecraft 1.21.1 and NeoForge. Strip enchantments into Liquid Experience, pour them back onto gear with a Blaze Enchanter, and mass-produce enchanted books with a Printer.
 
 Upstream rewrote the mod for 1.21.1 around a different set of machines. This fork keeps the machines people actually built their factories around. There are no new resources and no parallel progression: everything runs on Create's existing kinetics, fluids and belts.
