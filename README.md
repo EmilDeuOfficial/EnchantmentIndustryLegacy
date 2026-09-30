@@ -98,6 +98,7 @@ This fork uses its own mod id (`create_enchantment_industry_legacy`) and its own
 | Original project | [modrinth.com/mod/create-enchantment-industry](https://modrinth.com/mod/create-enchantment-industry) |
 | Original source | [DragonsPlusMinecraft/CreateEnchantmentIndustry](https://github.com/DragonsPlusMinecraft/CreateEnchantmentIndustry) |
 | License | MIT, see [LICENSE](LICENSE). The original copyright notice is kept intact and ships inside the JAR |
+| Permission | Granted by MarbleGateKeeper on the condition that the license is followed: [issue #513](https://github.com/DragonsPlusMinecraft/CreateEnchantmentIndustry/issues/513) |
 
 DragonsPlus released the **1.20.1** version, which this fork is derived from, under the **MIT license**, which
 permits redistribution and modification as long as the copyright notice travels with it. Their newer **1.21.1
